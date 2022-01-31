@@ -1,5 +1,5 @@
 If Not Wscript.Arguments.Named.Exists("elevate") Then
-  Call CreateObject("Shell.Application").ShellExecute(Wscript.FullName, Wscript.ScriptFullName & " /elevate", "", "runas", 1)
+  Call CreateObject("Shell.Application").ShellExecute(Wscript.FullName, """" & Wscript.ScriptFullName & """ /elevate", "", "runas", 1)
   Wscript.Quit()
 End If
 
